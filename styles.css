@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(30, 38%, 92%);
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875em;
+}
+
+h1 {
+    color: black;
+    font-family: 'Fraunces', serif;
+    font-size: 1.875em;
+}
+
+h3 {
+    font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 0.75em;
+    line-height: 1.7;
+}
+
+/* ------   ENTIRE CONTAINER --------- */
+
+
+.card {
+    min-width: 37.5em;
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/* ------   LEFT CONTAINER --------- */
+
+.left {
+    width: 50%;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* ------RIGHT CONTAINER --------- */
+
+
+.right { 
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5em;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 2.2em 2.5em;
+  
+}
+
+/* ------ PRICES --------- */
+
+.prices {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+.prices h1 {
+    color: hsl(158, 36%, 37%);
+    display: inline-block;
+}
+
+.prices p {
+    display: inline-block;
+    text-decoration: line-through;
+}
+
+/* ------- ADD TO CART --------- */
+
+button {
+    width: 100%;
+    padding: 1em 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.93em;
+}
+
+button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+button img {
+    margin-right: 7px;
+}
+
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+
+    .card {
+        max-width: 600px;
+
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    
+    .card {
+        min-width: auto;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+    
+
+    }
+
+    .left {
+        width: 100%;
+        height: 350px;
+        background-image: url(images/image-product-mobile.jpg);
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    .right {
+        width: 100%;
+        row-gap: 12px;
+        padding: 25px;
+        border-bottom: 0 0 10px 10px;
+    }
+
+    button {
+        margin-top: 10px;
+
+    }
+
+}
